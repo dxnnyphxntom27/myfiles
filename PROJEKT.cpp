@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <fstream>
 #include <string>
 
@@ -92,160 +92,6 @@ public:
     ~Artist() {}
 };
 
-void displayseparated()
-{
-    ifstream database("database.txt");
-    string tempstring;
-    string result;
-    string tempword;
-    string separr[6];
-    int sepint = 0;
-    while (getline(database, tempstring))
-    {
-        result = tempstring;
-        for (int i = 0; i < result.size(); i++)
-        {
-            if (result[i] != ';')
-            {
-                tempword += result[i];
-            }
-            else
-            {
-                separr[sepint] += tempword;
-                tempword = "";
-                sepint++;
-            }
-        }
-
-        for (int o = 0; o < 3; o++)
-        {
-            cout << separr[o] << endl;
-        }
-        tempword = "";
-        sepint = 0;
-        fill_n(separr, 6, "");
-        cout << endl << endl;
-    }
-    database.close();
-}
-
-void searchbyname(string inputname)
-{
-    ifstream database("database.txt");
-    string tempstring;
-    string result;
-    string tempword;
-    string separr[6];
-    int sepint = 0;
-    while (getline(database, tempstring))
-    {
-        result = tempstring;
-        for (int i = 0; i < result.size(); i++)
-        {
-            if (result[i] != ';')
-            {
-                tempword += result[i];
-            }
-            else
-            {
-                separr[sepint] += tempword;
-                tempword = "";
-                sepint++;
-            }
-        }
-        if (separr[0] == inputname)
-        {
-            for (int o = 0; o < 3; o++)
-            {
-                cout << separr[o] << endl;
-            }
-            cout << endl << endl;
-        }
-        tempword = "";
-        sepint = 0;
-        fill_n(separr, 6, "");
-    }
-    database.close();
-}
-
-void searchbyalbum(string inputname)
-{
-    ifstream database("database.txt");
-    string tempstring;
-    string result;
-    string tempword;
-    string separr[6];
-    int sepint = 0;
-    while (getline(database, tempstring))
-    {
-        result = tempstring;
-        for (int i = 0; i < result.size(); i++)
-        {
-            if (result[i] != ';')
-            {
-                tempword += result[i];
-            }
-            else
-            {
-                separr[sepint] += tempword;
-                tempword = "";
-                sepint++;
-            }
-        }
-        if (separr[1] == inputname)
-        {
-            for (int o = 0; o < 3; o++)
-            {
-                cout << separr[o] << endl;
-            }
-            cout << endl << endl;
-        }
-        tempword = "";
-        sepint = 0;
-        fill_n(separr, 6, "");
-    }
-    database.close();
-}
-
-void searchbysong(string inputname)
-{
-    ifstream database("database.txt");
-    string tempstring;
-    string result;
-    string tempword;
-    string separr[6];
-    int sepint = 0;
-    while (getline(database, tempstring))
-    {
-        result = tempstring;
-        for (int i = 0; i < result.size(); i++)
-        {
-            if (result[i] != ';')
-            {
-                tempword += result[i];
-            }
-            else
-            {
-                separr[sepint] += tempword;
-                tempword = "";
-                sepint++;
-            }
-        }
-        if (separr[2] == inputname)
-        {
-            for (int o = 0; o < 3; o++)
-            {
-                cout << separr[o] << endl;
-            }
-            cout << endl << endl;
-        }
-        tempword = "";
-        sepint = 0;
-        fill_n(separr, 6, "");
-    }
-    database.close();
-}
-
 int main()
 {
     string inputname;
@@ -254,7 +100,6 @@ int main()
     cout << "Do you want simple (1) or advanced (2) search method?." << endl << endl;
     cin >> simpleoradvance;
     cin.ignore();
-    displayseparated;
     try  //Exception musi być z założenia wykładowcy
     {
         if (simpleoradvance > 2)
@@ -581,33 +426,7 @@ int main()
     }
     else if (simpleoradvance == 1) // To jest właściwie bezużyteczne, wczesna wersja programu przed zmianą wymagań wykładowcy
     {
-        cout << "Search artist(1)" << endl;
-        cout << "Search album(2)" << endl;
-        cout << "Search song(3)" << endl;
-        cin >> choice;
-        cin.ignore();
-        if (choice == 1)
-        {
-            cout << "Enter artist name: " << endl;
-            getline(cin, inputname);
-            searchbyname(inputname);
-        }
-        else if (choice == 2)
-        {
-            cout << "Enter album name: " << endl;
-            getline(cin, inputname);
-            searchbyalbum(inputname);
-        }
-        else if (choice == 3)
-        {
-            cout << "Enter song name: " << endl;
-            getline(cin, inputname);
-            searchbysong(inputname);
-        }
-        else
-        {
-            cout << "Wrong choice." << endl;
-        }
+        
     }
     _CrtDumpMemoryLeaks();
 }
