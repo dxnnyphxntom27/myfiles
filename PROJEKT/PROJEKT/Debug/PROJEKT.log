@@ -1,0 +1,34 @@
+﻿  PROJEKT.cpp
+C:\Users\yakac\source\repos\PROJEKT\PROJEKT\PROJEKT.cpp(110,27): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\yakac\source\repos\PROJEKT\PROJEKT\PROJEKT.cpp(174,35): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\yakac\source\repos\PROJEKT\PROJEKT\PROJEKT.cpp(392,56): warning C4244: "argument": konwersja z "float" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\yakac\source\repos\PROJEKT\PROJEKT\PROJEKT.cpp(392,47): warning C4244: "argument": konwersja z "float" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\yakac\source\repos\PROJEKT\PROJEKT\PROJEKT.cpp(430,56): warning C4244: "argument": konwersja z "float" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\yakac\source\repos\PROJEKT\PROJEKT\PROJEKT.cpp(430,47): warning C4244: "argument": konwersja z "float" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\yakac\source\repos\PROJEKT\PROJEKT\PROJEKT.cpp(456,56): warning C4244: "argument": konwersja z "float" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\yakac\source\repos\PROJEKT\PROJEKT\PROJEKT.cpp(456,47): warning C4244: "argument": konwersja z "float" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+  PROJEKT.vcxproj -> C:\Users\yakac\source\repos\PROJEKT\Debug\PROJEKT.exe
